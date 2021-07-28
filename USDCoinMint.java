@@ -7,7 +7,22 @@ public class USDCoinMint extends CoinMint {
      * @return a Coin reference to the respective coin based on denomination
      */
     public Coin createCoin(double denom) {
-        
+
+        switch(denom) {
+            case 1.00:
+
+            case 0.50:
+
+            case 0.25:
+
+            case 0.10:
+
+            case 0.05:
+
+            case 0.01:
+
+            default:
+        }
     }
 
 }

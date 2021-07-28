@@ -14,4 +14,9 @@ public abstract Coin {
         return denomination;
     }
 
+    /**
+     * TODO: Need to implement the methods for the minting process, including:
+     *  smelting, imprinting, inspecting, smoothing, buffing
+     *  inspecting fails 1 in 12 times, smoothing and buffing fail 1 in 1000
+     */
 }
