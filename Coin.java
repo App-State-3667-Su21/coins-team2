@@ -1,4 +1,4 @@
-public abstract Coin {
+public abstract class Coin {
     public String countryCode;
     public double denomination;
 
@@ -6,11 +6,11 @@ public abstract Coin {
         this.denomination = denomination;
     }
 
-    public getCountryCode() {
+    public String getCountryCode() {
         return countryCode;
     }
 
-    public getDenomination() {
+    public double getDenomination() {
         return denomination;
     }
 
@@ -20,13 +20,13 @@ public abstract Coin {
      *  inspecting fails 1 in 12 times, smoothing and buffing fail 1 in 1000
      */
 
-    public abstract smelt();
+    public abstract void smelt();
 
-    public abstract imprint();
+    public abstract void imprint();
 
-    public abstract inspect();
+    public abstract void inspect();
 
-    public abstract smoothing();
+    public abstract void smoothing();
 
-    public abstract buffing();
+    public abstract void buffing();
 }
