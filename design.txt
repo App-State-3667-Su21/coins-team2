@@ -56,6 +56,16 @@ Classes:
             - name
         + Different kinds of Coins for each country
                 (will eventually implement strategy pattern for metal comp)
+            - TwoDollar
+            - Dollar
+            - HalfDollar
+            - Quarter
+            - CADQuarter
+            - Dime
+            - CADDime
+            - Nickle
+            - CADNickle
+            - Penny
     
     - NullCoin: (NullObj, f3)
         - will extend the coin abstraction
