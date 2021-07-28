@@ -1,6 +1,6 @@
 public class Penny extends Coin {
     public Penny() {
         countryCode = "USD";
-        denomination = .01;
+        denomination = 0.01;
     }
 }
