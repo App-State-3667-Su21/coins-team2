@@ -1,4 +1,5 @@
-JUNIT_JAR = junit-platform-console-standalone-1.2.0.jar
+JUNIT5_JAR = junit-platform-console-standalone-1.2.0.jar
+JUNIT5_RUNNER = org.junit.platform.console.ConsoleLauncher
 CKSTYLE_COMMAND =  -jar checkstyle-5.5-all.jar
 
 compile: $(JUNIT5_JAR)

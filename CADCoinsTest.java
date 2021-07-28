@@ -23,7 +23,8 @@ public class CADCoinsTest {
 	}
 
 	// Test all cad coins with multiple assertEquals in this method.
-	@Test
+	/*
+    @Test
 	public void testGetName() {
 		double[] coinVals = {.05, .1, .25, .5, 1.0, 2.0};
 		String[] coinNames = {"Nickel", "Dime", "Quarter", "FiftyCent", "Loonie", "Toonie"};
@@ -37,7 +38,7 @@ public class CADCoinsTest {
 			+ ", but got: " + testVal);
 		}
 	}
-
+    */
 
     @Test
     public void testGetCountryCode() {

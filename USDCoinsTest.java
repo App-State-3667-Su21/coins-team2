@@ -1,7 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-public class USCoinsTest {
+public class USDCoinsTest {
 	
 	USCoinFactory uscf = USCoinFactory.getInstance();
 
@@ -23,7 +23,8 @@ public class USCoinsTest {
 	}
 
 	//Test all US coin names
-	@Test
+	/*
+    @Test
 	public void testGetName() {
 		double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
 		String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
@@ -37,7 +38,7 @@ public class USCoinsTest {
 			+ ", but got: " + testVal);
 		}
 	}
-
+    */
     
     @Test
     public void testGetCountryCode() {
