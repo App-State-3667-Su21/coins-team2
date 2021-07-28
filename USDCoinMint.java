@@ -40,5 +40,4 @@ public class USDCoinMint extends CoinMint {
             // TODO: This is where we would implement NullCoin?
         }
     }
-
 }

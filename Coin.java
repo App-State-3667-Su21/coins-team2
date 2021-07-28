@@ -19,4 +19,14 @@ public abstract Coin {
      *  smelting, imprinting, inspecting, smoothing, buffing
      *  inspecting fails 1 in 12 times, smoothing and buffing fail 1 in 1000
      */
+
+    public abstract smelt();
+
+    public abstract imprint();
+
+    public abstract inspect();
+
+    public abstract smoothing();
+
+    public abstract buffing();
 }
