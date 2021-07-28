@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 public class USCoinsTest {
 	
-	USCoinFactory uscf; = USCoinFactory.getInstance();
+	USCoinMint uscf = USCoinMint().getInstance();
 
 
 	@Test
