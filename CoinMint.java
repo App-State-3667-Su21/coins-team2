@@ -13,6 +13,11 @@ public abstract class CoinMint {
         coin = createCoin(d);
 
         // TODO: add in methods for the manufacturing process of minting coins.
+        coin.smelt();
+        coin.imprint();
+        coin.inspect();
+        coin.smooth();
+        coin.buff();
     }
 
     /**

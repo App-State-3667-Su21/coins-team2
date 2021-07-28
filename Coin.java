@@ -20,13 +20,14 @@ public abstract class Coin {
      *  inspecting fails 1 in 12 times, smoothing and buffing fail 1 in 1000
      */
 
+    
     public abstract void smelt();
 
     public abstract void imprint();
 
     public abstract void inspect();
 
-    public abstract void smoothing();
+    public abstract void smooth();
 
     public abstract void buffing();
 }
