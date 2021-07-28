@@ -10,11 +10,11 @@ public class CADCoinsTest {
 
 	// Test all us coins with multiple assertEquals in this method.
 	@Test
-	public void testCoinValue() {
+	public void testDenomination() {
 		double[] coinVals = {.05, .1, .25, .5, 1.0, 2.0};
 		for (double expectedVal : coinVals ) {
-			Coin c = cdcf.makeCoin(expectedVal);
-			double testVal = c.getValue();
+			Coin c = cdcf.createCoin(expectedVal);
+			double testVal = c.getDenomination();
 
 			assertEquals(testVal, expectedVal, 
 			"Expected: " + expectedVal 
@@ -24,12 +24,12 @@ public class CADCoinsTest {
 
 	// Test all cad coins with multiple assertEquals in this method.
 	@Test
-	public void testCoinName() {
+	public void testGetName() {
 		double[] coinVals = {.05, .1, .25, .5, 1.0, 2.0};
 		String[] coinNames = {"Nickel", "Dime", "Quarter", "FiftyCent", "Loonie", "Toonie"};
-		for (int i = 0; i < cointVals.length; i++) {
+		for (int i = 0; i < coinVals.length; i++) {
 			String expectedVal = coinNames[i];
-			Coin c = cdcf.makeCoin(coinVals[i]);
+			Coin c = cdcf.createCoin(coinVals[i]);
 			String testVal = c.getName();
 			 
 			assertEquals(testVal, expectedVal, 
@@ -39,5 +39,18 @@ public class CADCoinsTest {
 	}
 
 
+    @Test
+    public void testGetCountryCode() {
+        String expectedVal = "CAD";
+		double[] coinVals = {.05, .1, .25, .5, 1.0, 2.0};
+        for (double cV : coinVals) {
+            Coin c = uscf.createCoin(cV);
+            String testVal = c.getCountryCode();
+            
+			assertEquals(testVal, expectedVal, 
+			"Expected: " + expectedVal 
+			+ ", but got: " + testVal);
+        }
+    }
 	
 }
