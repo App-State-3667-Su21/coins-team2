@@ -1,10 +1,9 @@
-public class Loonie extends Coin {
-
-    public Loonie() {
+public class CadQuarter extends Coin {
+    public CadQuarter() {
         countryCode = "CAD";
-        denomination = 1.00;
+        denomination = 0.25;
     }
-
+    
     public void smelt() {
         System.out.println("Smelting coin...");
     }

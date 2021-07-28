@@ -1,8 +1,7 @@
-public class Loonie extends Coin {
-
-    public Loonie() {
+public class CadDime extends Coin {
+    public CadDime() {
         countryCode = "CAD";
-        denomination = 1.00;
+        denomination = 0.10;
     }
 
     public void smelt() {

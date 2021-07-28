@@ -1,8 +1,7 @@
-public class Loonie extends Coin {
-
-    public Loonie() {
+public class FiftyCent extends Coin {
+    public FiftyCent() {
         countryCode = "CAD";
-        denomination = 1.00;
+        denomination = 0.50;
     }
 
     public void smelt() {
