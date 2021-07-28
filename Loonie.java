@@ -1,4 +1,4 @@
-public Loonie extends Coin {
+public class Loonie extends Coin {
 
     public Loonie() {
         countryCode = "CAD";
