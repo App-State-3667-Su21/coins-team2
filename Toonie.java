@@ -1,8 +1,9 @@
-public class extends Coin {
-    
+public class Toonie extends Coin {
 
-    public Coin(double denomination) {
-        this
+
+    public Toonie() {
+        countryCode = "CAD";
+        denomination = 2.00;
     }
 
 }

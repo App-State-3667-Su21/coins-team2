@@ -1,6 +1,7 @@
 public class Quarter extends Coin {
+
     public Quarter() {
         countryCode = "USD";
-        denomination = .25;
+        denomination = 0.25;
     }
 }
