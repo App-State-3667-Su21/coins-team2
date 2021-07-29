@@ -48,7 +48,7 @@ public class USDCoinMintTest {
 
 	@Test
 	public void testHalfDollar() {
-		Coin c = uscm.createCoin(.25);
+		Coin c = uscm.createCoin(.5);
 		assertTrue(c instanceof HalfDollar);
 	}
 
