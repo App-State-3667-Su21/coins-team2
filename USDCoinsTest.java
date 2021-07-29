@@ -1,19 +1,24 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 public class USDCoinsTest {
 	
-	//USDCoinMint uscf = USDCoinMint.getInstance();
-    USDCoinMint uscf = new USDCoinMint();
+	USDCoinMint uscf;
+	double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
+
+	@BeforeEach
+	public void init() {
+		uscf = new USDCoinMint();
+	}
 
 
-	@Test
-	public void testNullCoin() {};
+	//@Test
+	//public void testNullCoin() {};
 
 	// Test all us coins with multiple assertEquals in this method.
 	@Test
 	public void testGetDenomination() {
-		double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
 		for (double expectedVal : coinVals ) {
 			Coin c = uscf.createCoin(expectedVal);
 			double testVal = c.getDenomination();
@@ -43,7 +48,6 @@ public class USDCoinsTest {
     @Test
     public void testGetCountryCode() {
         String expectedVal = "USD";
-		double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
         for (double cV : coinVals) {
             Coin c = uscf.createCoin(cV);
             String testVal = c.getCountryCode();

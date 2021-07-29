@@ -2,6 +2,10 @@ public abstract class Coin {
     public String countryCode;
     public double denomination;
 
+    public Coin() {
+
+    }
+
     public Coin(double denomination) {
         this.denomination = denomination;
     }
