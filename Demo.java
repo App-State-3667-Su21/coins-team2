@@ -16,7 +16,7 @@ public class Demo {
 
             if (c == null) {
                 if (denom != ZERO) {
-                    System.out.println("Error reading your entry");
+                    System.out.println("Error reading your entry\n");
                 }
                 else {
                     System.out.println();
@@ -33,7 +33,15 @@ public class Demo {
     public double getDenom() {
         System.out.print("Enter coin denomination (0.25 = a quarter, 0 to quit): ");
         String d = kb.nextLine();
-        double denom = Double.parseDouble(d);
+        
+        // will prevent demo from crashing if a number is not entered
+        double denom;
+        try{
+            denom = Double.parseDouble(d);
+        }
+        catch (NumberFormatException e) {
+            denom = -1.0;
+        }
 
         return denom;
     }
