@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Demo {
+    final static double ZERO = 0.0;
     Scanner kb = new Scanner(System.in);
 
     public static void main(String [] args) {
@@ -14,20 +15,26 @@ public class Demo {
             Coin c = usdMint.createCoin(denom);
 
             if (c == null) {
-                System.out.println("Error reading your entry");
+                if (denom != ZERO) {
+                    System.out.println("Error reading your entry");
+                }
+                else {
+                    System.out.println();
+                }
             }
             else {
                 usdMint.mintCoin(denom);
+                System.out.println();
             }
 
-        }while(denom != 0.0);
+        }while(denom != ZERO);
     }
 
     public double getDenom() {
         System.out.print("Enter coin denomination (0.25 = a quarter, 0 to quit): ");
         String d = kb.nextLine();
-        denom = d.parseDouble();
-        
+        double denom = Double.parseDouble(d);
+
         return denom;
     }
 }

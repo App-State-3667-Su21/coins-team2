@@ -17,6 +17,7 @@ public abstract class CoinMint {
         coin.inspect();
         coin.smooth();
         coin.buff();
+        
         return coin;
     }
 
