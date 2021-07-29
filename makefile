@@ -19,10 +19,5 @@ clean:
 check:
 	java $(CKSTYLE_COMMAND) -c ./mystyle.xml *.java
 	
-<<<<<<< HEAD
-test:
-	java -cp .:$(JUNIT5_JAR) $(JUNIT5_RUNNER) --scan-class-path
-=======
 test: $(JUNIT5_JAR)
 	java -cp .:$(JUNIT5_JAR) $(JUNIT5_RUNNER) --scan-class-path
->>>>>>> 94d7f2165c4209bc2216426f5cb41ed9cd30d588
