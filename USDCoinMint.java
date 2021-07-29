@@ -10,33 +10,28 @@ public class USDCoinMint extends CoinMint {
      * @return a Coin reference to the respective coin based on denomination
      */
     public Coin createCoin(double denom) {
-
-        switch(denom) {
-            case 1.00:
+        String denomS = String.valueOf(denom);
+        switch(denomS) {
+            case "1.0":
                 return new Dollar();
-                break;
             
-            case 0.50:
+            case "0.5":
                 return new HalfDollar();
-                break;
 
-            case 0.25:
+            case "0.25":
                 return new Quarter();
-                break;
 
-            case 0.10:
+            case "0.1":
                 return new Dime();
-                break;
 
-            case 0.05:
+            case "0.05":
                 return new Nickel();
-                break;
 
-            case 0.01:
+            case "0.01":
                 return new Penny();
-                break;
 
             default:
+                return null;
             // TODO: This is where we would implement NullCoin?
         }
     }

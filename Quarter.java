@@ -1,8 +1,8 @@
 public class Quarter extends Coin {
 
     public Quarter() {
+        super(0.25);
         countryCode = "USD";
-        denomination = 0.25;
     }
 
     public void smelt() {

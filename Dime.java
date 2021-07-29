@@ -1,8 +1,8 @@
 public class Dime extends Coin {
 
     public Dime() {
+        super(0.1);
         countryCode = "USD";
-        denomination = 0.10;
     }
 
     public void smelt() {

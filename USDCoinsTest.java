@@ -3,7 +3,8 @@ import org.junit.jupiter.api.Test;
 
 public class USDCoinsTest {
 	
-	USCoinMint uscf = USCoinMint().getInstance();
+	//USDCoinMint uscf = USDCoinMint.getInstance();
+    USDCoinMint uscf = new USDCoinMint();
 
 
 	@Test
@@ -15,7 +16,7 @@ public class USDCoinsTest {
 		double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
 		for (double expectedVal : coinVals ) {
 			Coin c = uscf.createCoin(expectedVal);
-			double testVal = c.getValue();
+			double testVal = c.getDenomination();
 
 			assertEquals(testVal, expectedVal, .00010);
 		}
