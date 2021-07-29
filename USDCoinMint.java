@@ -1,7 +1,19 @@
 public class USDCoinMint extends CoinMint {
+    private volatile static USDCoinMint uniqueInstance;
 
     // TODO: Eventually turn this into singleton.
-    public USDCoinMint() {}
+    private USDCoinMint() {}
+
+    public static USDCoinMint getInstance() {
+        if (uniqueInstance == null) {
+            synchronized (USDCoinMint.class) {
+                if (uniqueInstance == null) {
+                    uniqueInstance = new USDCoinMint();
+                }
+            }
+        }
+        return uniqueInstance;
+    }
 
     /**
      * Creates a coin with the respective country code and denomination.
