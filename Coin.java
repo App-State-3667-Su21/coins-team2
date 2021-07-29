@@ -14,11 +14,19 @@ public abstract class Coin {
         return denomination;
     }
     
-    public abstract void smelt();
+    public void smelt() {
+        System.out.println("Smelting " + this.getClass().getSimpleName() +  "...completed.");
+    }
 
-    public abstract void inspect();
+    public void inspect() {
+        System.out.println("Inspecting " + this.getClass().getSimpleName() +  "...completed.");
+    }
 
-    public abstract void smooth();
+    public void smooth() {
+        System.out.println("Smoothing " + this.getClass().getSimpleName() +  "...completed.");
+    }
 
-    public abstract void buffing();
+    public void buff() {
+        System.out.println("Buffing " + this.getClass().getSimpleName() +  "...completed.");
+    }
 }
