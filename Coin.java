@@ -3,7 +3,7 @@ public abstract class Coin {
     public double denomination;
 
     public Coin() {
-        
+
     }
 
     public Coin(double denomination) {
@@ -24,5 +24,5 @@ public abstract class Coin {
 
     public abstract void smooth();
 
-    public abstract void buffing();
+    public abstract void buff();
 }
