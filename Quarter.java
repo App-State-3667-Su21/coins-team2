@@ -6,7 +6,7 @@ public class Quarter extends Coin {
     }
 
     public void smelt() {
-        System.out.println("Smelting coin...");
+        System.out.println("Smelting " + this.getClass() +  "...completed.");
     }
 
     public void inspect() {
