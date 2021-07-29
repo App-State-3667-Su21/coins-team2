@@ -18,11 +18,11 @@ public abstract class Coin {
         return denomination;
     }
     
-    //public abstract void smelt();
+    public abstract void smelt();
 
-    //public abstract void inspect();
+    public abstract void inspect();
 
-    //public abstract void smooth();
+    public abstract void smooth();
 
-    //public abstract void buffing();
+    public abstract void buff();
 }
