@@ -33,7 +33,8 @@ public class USDCoinMintTest {
 		Coin c = uscm.createCoin(.05);
 		assertTrue(c instanceof Nickel);
 	}
-
+	
+	@Test
 	public void testDime() {
 		Coin c  = uscm.createCoin(.10);
 		assertTrue(c instanceof Dime);
