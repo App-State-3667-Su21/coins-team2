@@ -17,9 +17,7 @@ public class USDCoinsTest {
 			Coin c = uscf.createCoin(expectedVal);
 			double testVal = c.getValue();
 
-			assertEquals(testVal, expectedVal, 
-			"Expected: " + expectedVal 
-			+ ", but got: " + testVal);
+			assertEquals(testVal, expectedVal, .00010);
 		}
 	}
 
