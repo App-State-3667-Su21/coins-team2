@@ -14,7 +14,6 @@ public abstract class CoinMint {
 
         // manufacturing process of minting
         coin.smelt();
-        coin.imprint();
         coin.inspect();
         coin.smooth();
         coin.buff();

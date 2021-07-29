@@ -16,8 +16,6 @@ public abstract class Coin {
     
     public abstract void smelt();
 
-    public abstract void imprint();
-
     public abstract void inspect();
 
     public abstract void smooth();
