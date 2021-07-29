@@ -26,7 +26,7 @@ public class Demo {
     public double getDenom() {
         System.out.print("Enter coin denomination (0.25 = a quarter, 0 to quit): ");
         String d = kb.nextLine();
-        denom = d.parseDouble();
+        double denom = Double.parseDouble(d);
         
         return denom;
     }

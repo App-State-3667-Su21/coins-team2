@@ -21,3 +21,6 @@ check:
 	
 test: $(JUNIT5_JAR)
 	java -cp .:$(JUNIT5_JAR) $(JUNIT5_RUNNER) --scan-class-path
+
+demo: Demo.class
+	java Demo
