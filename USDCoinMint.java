@@ -32,7 +32,7 @@ public class USDCoinMint extends CoinMint {
 
             default:
                 return null;
-            // TODO: This is where we would implement NullCoin?
+                // TODO: This is where we would implement NullCoin?
         }
     }
 }
