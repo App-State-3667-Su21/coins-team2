@@ -12,9 +12,8 @@ public abstract class CoinMint {
         // defer to coin mint to create a coin with respective denomination
         coin = createCoin(d);
 
-        // TODO: add in methods for the manufacturing process of minting coins.
+        // manufacturing process of minting
         coin.smelt();
-        coin.imprint();
         coin.inspect();
         coin.smooth();
         coin.buff();

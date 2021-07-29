@@ -8,10 +8,6 @@ public class Penny extends Coin {
         System.out.println("Smelting coin...");
     }
 
-    public void imprint() {
-        System.out.println("Imprinting coin...");
-    }
-
     public void inspect() {
         System.out.println("Inspecting coin...");
     }
