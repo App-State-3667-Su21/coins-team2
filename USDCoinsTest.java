@@ -4,13 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class USDCoinsTest {
 	
-	USDCoinMint uscf;
+	USDCoinMint uscf = USDCoinMint.getInstance();
 	double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
-
-	@BeforeEach
-	public void init() {
-		uscf = new USDCoinMint();
-	}
 
 
 	//@Test

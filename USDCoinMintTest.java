@@ -4,11 +4,46 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class USDCoinMintTest {
 	
-	USDCoinMint uscm;
-
-	@BeforeEach
-	public void init() {
-		uscm = new USDCoinMint();
+	USDCoinMint uscm = USDCoinMint.getInstance();
+	
+	
+	@Test
+	public void testUnthreaded() {
+	    USDCoinMint mint1 = USDCoinMint.getInstance();
+	    USDCoinMint mint2 = USDCoinMint.getInstance();
+	    
+	    assertEquals(mint1, mint2);
+	}
+	
+	@Test
+	public void testThreaded() {
+	    USDCoinMint[] mint1 = new USDCoinMint[1];
+	    USDCoinMint mint2;
+	    USDCoinMint mint3;
+	    
+	    class testThread implements Runnable {
+	        public void run() {
+	            try {
+	                //Thread.sleep();
+	                mint1[0] = USDCoinMint.getInstance();
+	            }
+	            catch (Exception e) {
+	                e.printStackTrace();
+	            }
+	        }
+	    }    
+	    Thread obj = new Thread(new testThread());
+	    obj.start();
+	    mint2 = USDCoinMint.getInstance();
+	    try {
+	        obj.join();
+	    }
+	    catch(Exception e) {
+	        e.printStackTrace();
+	    }
+	    
+        assertSame(mint1[0], mint2);
+	    
 	}
 
 	// @Test

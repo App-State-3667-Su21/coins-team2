@@ -6,7 +6,7 @@ public class Demo {
     public static void main(String [] args) {
         Demo d = new Demo();
         //Scanner kb = new Scanner(System.in);
-        USDCoinMint usdMint = new USDCoinMint();
+        USDCoinMint usdMint = USDCoinMint.getInstance();
 
         double denom;
         do {
