@@ -29,4 +29,27 @@ public abstract class Coin {
     public void buff() {
         System.out.println("Buffing " + this.getClass().getSimpleName() +  "...completed.");
     }
+
+    private static class NullCoin extends Coin {
+        public NullCoin() {
+            super(-1);
+        }
+        @Override
+        public String getCountryCode() {
+            return "";
+        }
+        @Override
+        public double getDenomination() {
+            return -1;
+        }
+        @Override
+        public void smelt() {}
+        @Override
+        public void inspect() {}
+        @Override
+        public void smooth() {}
+        @Override
+        public void buff() {}
+    }
+    public static Coin NULL = new NullCoin();
 }
