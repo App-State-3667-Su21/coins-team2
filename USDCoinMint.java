@@ -43,7 +43,7 @@ public class USDCoinMint extends CoinMint {
                 return new Penny();
 
             default:
-                return new NullCoin();
+                return Coin.NULL;
                 // TODO: This is where we would implement NullCoin?
         }
     }

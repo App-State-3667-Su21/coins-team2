@@ -96,6 +96,6 @@ public class USDCoinMintTest {
 	@Test
 	public void testNullCoin() {
 	    Coin c = uscm.createCoin(-0.125684716874);
-	    assertTrue(c instanceof NullCoin);
+	    assertTrue(c.equals(Coin.NULL));
 	}
 }
