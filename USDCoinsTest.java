@@ -8,8 +8,21 @@ public class USDCoinsTest {
 	double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
 
 
-	//@Test
-	//public void testNullCoin() {};
+	@Test
+	public void testNullCoinDenomination() {
+	    Coin c = uscf.createCoin(-1.32435454534);
+	    double testVal = c.getDenomination();
+	    
+	    assertEquals(testVal, -1.0);
+	}
+	
+	@Test
+	public void testNullCoinCountryCode() {
+        Coin c = uscf.createCoin(-1.32435454534);
+        String testVal = c.getCountryCode();
+        
+        assertEquals(testVal, "");
+    }
 
 	// Test all us coins with multiple assertEquals in this method.
 	@Test
@@ -21,24 +34,6 @@ public class USDCoinsTest {
 			assertEquals(testVal, expectedVal, .00010);
 		}
 	}
-
-	//Test all US coin names
-	/*
-    @Test
-	public void testGetName() {
-		double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
-		String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
-		for (int i = 0; i < cointVals.length; i++) {
-			String expectedVal = coinNames[i];
-			Coin c = uscf.createCoin(coinVals[i]);
-			String testVal = c.getName();
-			 
-			assertEquals(testVal, expectedVal, 
-			"Expected: " + expectedVal 
-			+ ", but got: " + testVal);
-		}
-	}
-    */
     
     @Test
     public void testGetCountryCode() {

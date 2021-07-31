@@ -92,12 +92,10 @@ public class USDCoinMintTest {
 		Coin c = uscm.createCoin(1.0);
 		assertTrue(c instanceof Dollar);
 	}
-
-//	@Test
-//	public void testSingleton(){
-//		USDCoinMint uscm1 = USDCoinMint.getInstance();
-//		USDCoinMint uscm2 = USDCoinMint.getInstance();
-//
-//		assertEquals(uscm1, uscm2);
-//	}
+	
+	@Test
+	public void testNullCoin() {
+	    Coin c = uscm.createCoin(-0.125684716874);
+	    assertTrue(c instanceof NullCoin);
+	}
 }
