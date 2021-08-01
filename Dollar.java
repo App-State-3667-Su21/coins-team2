@@ -4,4 +4,8 @@ public class Dollar extends Coin {
         super(1.0);
         countryCode = "USD";
     }
+    
+    public void smelt() {
+        System.out.println("Smelting " + this.getClass().getSimpleName() + " with 88.5% Cu, 6% Zn, 3.5% Mn, 2% Ni...completed.");
+    }
 }
