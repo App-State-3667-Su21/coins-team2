@@ -11,6 +11,8 @@ public class NullCoin extends Coin {
     public double getDenomination() {
         return -1;
     }
+    
+    public void manufactureCoin() {};
 
     public void smelt() {};
 

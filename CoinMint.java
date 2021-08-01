@@ -13,10 +13,7 @@ public abstract class CoinMint {
         coin = createCoin(d);
 
         // manufacturing process of minting
-        coin.smelt();
-        coin.inspect();
-        coin.smooth();
-        coin.buff();
+        coin.manufactureCoin();
         return coin;
     }
 
