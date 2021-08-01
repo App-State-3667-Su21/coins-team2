@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-public class USSmeltTest {
+public class USDSmeltTest {
 	
 	USDCoinMint uscm;
 	Coin c;
@@ -50,7 +50,15 @@ public class USSmeltTest {
 
 	@Test
 	public void testNickelSmelt() {
+		c = uscm.createCoin(.05);
+		String expectedResult = "Smelting Nickel with 75% Cu and 25% Ni...completed.\n";
+		printPrep();
+		c.smelt();
+		String testOutput = getTestOutput();
 
+		assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
 	}
 
 	
