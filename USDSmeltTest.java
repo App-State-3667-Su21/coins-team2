@@ -73,4 +73,30 @@ public class USDSmeltTest {
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
 	}
+
+	@Test
+	public void testQuarterSmelt() {
+		c = uscm.createCoin(.25);
+		String expectedResult = "Smelting Quarter with 91.67% Cu and 8.33% Ni...completed.\n";
+		printPrep();
+		c.smelt();
+		String testOutput = getTestOutput();
+
+		assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+	}
+
+	@Test
+	public void testHalfDollarSmelt() {
+		c = uscm.createCoin(.5);
+		String expectedResult = "Smelting HalfDollar with 91.67% Cu and 8.33% Ni...completed.\n";
+		printPrep();
+		c.smelt();
+		String testOutput = getTestOutput();
+
+		assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+	}
 }
