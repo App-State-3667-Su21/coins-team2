@@ -82,6 +82,8 @@ public abstract class Coin {
         public void smooth() {}
         @Override
         public void buff() {}
+        @Override
+        public void manufactureCoin() {}
     }
     public static Coin NULL = new NullCoin();
 }
