@@ -61,5 +61,16 @@ public class USDSmeltTest {
 		   + "' but got '" + testOutput + "'.");
 	}
 
-	
+	@Test
+	public void testDimeSmelt() {
+		c = uscm.createCoin(.1);
+		String expectedResult = "Smelting Dime with 91.67% Cu and 8.33% Ni...completed.\n";
+		printPrep();
+		c.smelt();
+		String testOutput = getTestOutput();
+
+		assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+	}
 }
