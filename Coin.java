@@ -37,7 +37,7 @@ public abstract class Coin {
                     System.out.println("Failed to manufacture coin.");
                 }
                 else {
-                    buff();
+                    smooth();
                     System.out.println("(" + this.getClass().getSimpleName() + ")$" + this.getDenomination());
                 }
             }
