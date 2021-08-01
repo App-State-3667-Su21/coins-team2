@@ -99,4 +99,17 @@ public class USDSmeltTest {
 		   "Expected:'" + expectedResult 
 		   + "' but got '" + testOutput + "'.");
 	}
+
+	@Test
+	public void testDollarSmelt() {
+		c = uscm.createCoin(1);
+		String expectedResult = "Smelting Dollar with 88.5% Cu, 6% Zn, 3.5% Mn, and 2% Ni...completed.\n";
+		printPrep();
+		c.smelt();
+		String testOutput = getTestOutput();
+
+		assertTrue(expectedResult.equals(testOutput),
+		   "Expected:'" + expectedResult 
+		   + "' but got '" + testOutput + "'.");
+	}
 }
