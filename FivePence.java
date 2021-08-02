@@ -4,7 +4,7 @@ public class FivePence extends Coin {
         countryCode = "GBP";
     }
 
-    public void smelt() {
+        public void smelt() {
         System.out.println("Smelting " + this.getClass().getSimpleName() + 
             " with 75% Cu and 25% Ni...completed");
     }
