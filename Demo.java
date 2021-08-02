@@ -60,7 +60,7 @@ public class Demo {
 
     /**
      * Method to help prevent crashing for.
-     * DEPRECATED?
+     * DEPRECATED because of null coin, idk.
      * 
      * @return double value of denom
      */

@@ -19,6 +19,7 @@ public class Dollar extends Coin {
      * Prints out unique smelting method for dollar coins.
      */
     public void smelt() {
-        System.out.println("Smelting " + this.getClass().getSimpleName() + " with 88.5% Cu, 6% Zn, 3.5% Mn, and 2% Ni...completed.");
+        System.out.println("Smelting " + this.getClass().getSimpleName() 
+            + " with 88.5% Cu, 6% Zn, 3.5% Mn, and 2% Ni...completed.");
     }
 }

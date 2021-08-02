@@ -1,5 +1,4 @@
 /**
-<<<<<<< HEAD
  * Abstract facotry implemetation.
  * 
  * @author Jake B., Justin P., Matt N., Reis G.
