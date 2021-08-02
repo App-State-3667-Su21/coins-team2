@@ -7,5 +7,59 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
 public class USDImprintTest {
+    USDCoinMint uscm;
+	Coin c;
 
+	PrintStream origOut;
+	ByteArrayOutputStream baos;
+	PrintStream newOut;
+
+	@BeforeEach
+	public void init() {
+		uscm = USDCoinMint.getInstance();
+	}
+	
+	private void printPrep() {
+		origOut = System.out;
+		baos = new ByteArrayOutputStream();
+		newOut = new PrintStream(baos);
+		System.setOut(newOut);
+	}
+
+	private String getTestOutput() {
+		System.out.flush();
+		String testOutput = baos.toString();
+		System.setOut(origOut);
+		return testOutput;
+	}
+
+    // @Test
+	// public void testPennyImprint() {
+	// 	c = uscm.createCoin(.01);
+	// 	String expectedResult = "Imprinting Penny...completed.\n";
+	// 	printPrep();
+	// 	c.imprint();
+	// 	String testOutput = getTestOutput();
+
+	// 	assertTrue(expectedResult.equals(testOutput),
+	// 	   "Expected:'" + expectedResult 
+	// 	   + "' but got '" + testOutput + "'.");
+	// }
+
+    @Test
+	public void testCoinImprint() {
+        double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
+        String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
+        for (int i = 0; i < coinVals.length; i++ ) {          
+            c = uscm.createCoin(coinVals[i]);
+            String expectedResult = "Imprinting " + coinNames[i] + "...completed.\n";
+            printPrep();
+            c.imprint();
+            String testOutput = getTestOutput();
+
+            assertTrue(expectedResult.equals(testOutput),
+            "Expected:'" + expectedResult 
+            + "' but got '" + testOutput + "'.");
+        }
+	}
 }
