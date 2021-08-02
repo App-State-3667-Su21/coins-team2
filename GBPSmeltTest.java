@@ -129,8 +129,8 @@ public class GBPSmeltTest {
     @Test
 	public void testTwoPoundSmelt() {
 		c = gbcm.createCoin(2.0);
-		String expectedResult = "Smelting TwoPound outer ring with 76% Cu, 20% Zi, and 4% Ni...completed.\n" + 
-                                "Smelting TwoPound inner ring with 75% Cu and 25% Ni...completed.\n";
+		String expectedResult = "Smelting TwoPence with 76% Cu and 20% Zi and 4% Ni in the outer ring" +
+                                " and 75% Cu and 25% Ni in the inner ring...completed\n";
 		printPrep();
 		c.smelt();
 		String testOutput = getTestOutput();
