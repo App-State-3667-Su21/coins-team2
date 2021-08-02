@@ -20,7 +20,7 @@ check:
 	java $(CKSTYLE_COMMAND) -c ./mystyle.xml Coin.java
 	java $(CKSTYLE_COMMAND) -c ./mystyle.xml CoinMint.java
 	java $(CKSTYLE_COMMAND) -c ./mystyle.xml Demo.java
-	java $(CKSTYLE_COMMAND) -c ./mystyle.xml USCoinMint.java
+	java $(CKSTYLE_COMMAND) -c ./mystyle.xml USDCoinMint.java
 	java $(CKSTYLE_COMMAND) -c ./mystyle.xml Dime.java
 	java $(CKSTYLE_COMMAND) -c ./mystyle.xml Dollar.java
 	java $(CKSTYLE_COMMAND) -c ./mystyle.xml HalfDollar.java

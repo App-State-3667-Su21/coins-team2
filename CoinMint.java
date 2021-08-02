@@ -1,8 +1,9 @@
 /**
- * CoinMint factory abstraction, will be extended to create CoinMint factories.
+ * Abstract facotry implemetation.
  * 
- * @author Coins Team 2
- * @version Summer 2021
+ * @author Jake B., Justin P., Matt N., Reis G.
+ * @version 2/8/21
+ *
  */
 public abstract class CoinMint {
     
