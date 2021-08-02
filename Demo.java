@@ -56,6 +56,7 @@ public class Demo {
             }
 
         } while(denom != ZERO);
+
     }
 
     /**

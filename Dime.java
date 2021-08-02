@@ -14,7 +14,7 @@ public class Dime extends Coin {
         super(0.1);
         countryCode = "USD";
     }
-    
+
     /**
      * Prints out unique smelting method for dimes.
      */

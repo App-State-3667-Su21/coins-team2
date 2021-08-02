@@ -21,6 +21,7 @@ public abstract class CoinMint {
 
         // manufacturing process of minting
         coin.manufactureCoin();
+
         return coin;
     }
 
