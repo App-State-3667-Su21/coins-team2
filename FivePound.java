@@ -17,6 +17,7 @@ public class FivePound extends Coin {
      * Smelting method.
      */
     public void smelt() {
-        System.out.println("Smelting " + this.getClass().getSimpleName() + " with 75% Cu and 25% Ni...completed.");
+        System.out.println("Smelting " + this.getClass().getSimpleName() 
+            + " with 75% Cu and 25% Ni...completed.");
     }
 }

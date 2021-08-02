@@ -7,26 +7,28 @@
 public class GBPCoinMint extends CoinMint {
     private volatile static GBPCoinMint uniqueInstance;
 
+    /**
+     * Constructor.
+     */
     private GBPCoinMint() {
 
     }
 
     /**
-     * Double check lock.
+     * Double Check Lock.
      * 
      * @return an instance of the gbp coin mint.
      */
     public static GBPCoinMint getInstance() {
-       if (uniqueInstance == null) {
-           synchronized (GBPCoinMint.class) {
-               if (uniqueInstance == null) {
-                   uniqueInstance = new GBPCoinMint();
-               }
-           }
-       } 
-       return uniqueInstance;
+        if (uniqueInstance == null) {
+            synchronized (GBPCoinMint.class) {
+                if (uniqueInstance == null) {
+                    uniqueInstance = new GBPCoinMint();
+                }
+            }
+        }
+        return uniqueInstance;
     }
-
     /**
      * Creates a coin with the respective country code and denomination.
      * 

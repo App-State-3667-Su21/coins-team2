@@ -1,5 +1,5 @@
 /**
- * Pound coin class
+ * Pound coin class.
  * 
  * @author Justin Pretlow
  * @version 8/2/2021
@@ -17,7 +17,7 @@ public class Pound extends Coin {
      * Smelting method.
      */
     public void smelt() {
-        System.out.println("Smelting " + this.getClass().getSimpleName() + " with 70% Cu, " +
-            "24.5% Zi, and 5.5% Ni...completed.");
+        System.out.println("Smelting " + this.getClass().getSimpleName() 
+            + " with 70% Cu, 24.5% Zi, and 5.5% Ni...completed.");
     }
 }
