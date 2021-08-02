@@ -2,7 +2,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 
-public class GPBCoinsTest {
+public class GBPCoinsTest {
 	
 	GBPCoinMint gbcf = GBPCoinMint.getInstance();
 	double[] coinVals = {.01, .02, .05, .1, .20, .5, 1.0, 2.0, 5.0};

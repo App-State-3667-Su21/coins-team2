@@ -5,7 +5,7 @@ public class GBPCoinMint extends CoinMint {
 
     }
 
-    public static CADCoinMint getInstance() {
+    public static GBPCoinMint getInstance() {
        if (uniqueInstance == null) {
            synchronized (GBPCoinMint.class) {
                if (uniqueInstance == null) {

@@ -9,6 +9,8 @@ import org.junit.jupiter.api.BeforeEach;
 public class GBPManufactureStepsTest {
     GBPCoinMint gbcm;
 	Coin c;
+    double[] coinVals = {.01, .02, .05, .1, .2, .5, 1.0, 2.0, 5.0};
+    String[] coinNames = {"Pence", "TwoPence", "FivePence", "TenPence", "TwentyPence", "FiftyPence", "Pound", "TwoPound", "FivePound"};
 
 	PrintStream origOut;
 	ByteArrayOutputStream baos;
@@ -35,8 +37,6 @@ public class GBPManufactureStepsTest {
 
     @Test
 	public void testCoinImprint() {
-        double[] coinVals = {.01, .02, .05, .1, .2, .5, 1.0, 2.0, 5.0};
-        String[] coinNames = {"Pence", "TwoPence", "FivePence", "TenPence", "TwentyPence", "FiftyPence", "Pound", "TwoPound", "FivePound"};
         for (int i = 0; i < coinVals.length; i++ ) {          
             c = gbcm.createCoin(coinVals[i]);
             String expectedResult = "Imprinting " + coinNames[i] + "...completed.\n";
@@ -52,8 +52,6 @@ public class GBPManufactureStepsTest {
 
     @Test
 	public void testCoinInspect() {
-        double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
-        String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
         for (int i = 0; i < coinVals.length; i++ ) {          
             c = gbcm.createCoin(coinVals[i]);
             String expectedResult = "Inspecting " + coinNames[i] + "...completed.\n";
@@ -69,8 +67,6 @@ public class GBPManufactureStepsTest {
 
     @Test
 	public void testCoinSmooth() {
-        double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
-        String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
         for (int i = 0; i < coinVals.length; i++ ) {          
             c = gbcm.createCoin(coinVals[i]);
             String expectedResult = "Smoothing " + coinNames[i] + "...completed.\n";
@@ -86,8 +82,6 @@ public class GBPManufactureStepsTest {
 
     @Test
 	public void testCoinBuff() {
-        double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
-        String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
         for (int i = 0; i < coinVals.length; i++ ) {          
             c = gbcm.createCoin(coinVals[i]);
             String expectedResult = "Buffing " + coinNames[i] + "...completed.\n";

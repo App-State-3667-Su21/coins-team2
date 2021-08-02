@@ -9,6 +9,8 @@ import org.junit.jupiter.api.BeforeEach;
 public class USDManufactureStepsTest {
     USDCoinMint uscm;
 	Coin c;
+    double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
+    String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
 
 	PrintStream origOut;
 	ByteArrayOutputStream baos;
@@ -48,8 +50,6 @@ public class USDManufactureStepsTest {
 
     @Test
 	public void testCoinImprint() {
-        double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
-        String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
         for (int i = 0; i < coinVals.length; i++ ) {          
             c = uscm.createCoin(coinVals[i]);
             String expectedResult = "Imprinting " + coinNames[i] + "...completed.\n";
@@ -65,8 +65,6 @@ public class USDManufactureStepsTest {
 
     @Test
 	public void testCoinInspect() {
-        double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
-        String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
         for (int i = 0; i < coinVals.length; i++ ) {          
             c = uscm.createCoin(coinVals[i]);
             String expectedResult = "Inspecting " + coinNames[i] + "...completed.\n";
@@ -82,8 +80,6 @@ public class USDManufactureStepsTest {
 
     @Test
 	public void testCoinSmooth() {
-        double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
-        String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
         for (int i = 0; i < coinVals.length; i++ ) {          
             c = uscm.createCoin(coinVals[i]);
             String expectedResult = "Smoothing " + coinNames[i] + "...completed.\n";
@@ -99,8 +95,6 @@ public class USDManufactureStepsTest {
 
     @Test
 	public void testCoinBuff() {
-        double[] coinVals = {.01, .05, .1, .25, .5, 1.0};
-        String[] coinNames = {"Penny", "Nickel", "Dime", "Quarter", "HalfDollar", "Dollar"};
         for (int i = 0; i < coinVals.length; i++ ) {          
             c = uscm.createCoin(coinVals[i]);
             String expectedResult = "Buffing " + coinNames[i] + "...completed.\n";
