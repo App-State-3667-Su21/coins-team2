@@ -1,3 +1,10 @@
+/**
+ * Abstract facotry implemetation.
+ * 
+ * @author Jake B., Justin P., Matt N., Reis G.
+ * @version 2/8/21
+ *
+ */
 public abstract class CoinMint {
     
     /**

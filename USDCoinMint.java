@@ -1,9 +1,23 @@
+/**
+ * Concrete CoinMint facotry for US Currency.
+ * 
+ * @author Jake B., Justin P., Matt N., Reis G.
+ * @version 2/8/21
+ *
+ */
 public class USDCoinMint extends CoinMint {
     private volatile static USDCoinMint uniqueInstance;
 
-    // TODO: Eventually turn this into singleton.
-    private USDCoinMint() {}
+    /**
+     * Empty constructor.
+     */
+    private USDCoinMint() { }
 
+    /**
+     * Double check lock singleton for USDCoinMint.
+     * 
+     * @return uniqueInstance - singleton
+     */
     public static USDCoinMint getInstance() {
         if (uniqueInstance == null) {
             synchronized (USDCoinMint.class) {
