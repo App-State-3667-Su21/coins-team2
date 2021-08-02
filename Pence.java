@@ -6,6 +6,6 @@ public class Pence extends Coin {
 
     public void smelt() {
         System.out.println("Smelting " + this.getClass().getSimpleName() + 
-            " with Cu plated steel...completed");
+            " with Cu plated steel...completed.");
     }
 }

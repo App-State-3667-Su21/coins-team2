@@ -5,7 +5,7 @@ public class Pound extends Coin {
     }
 
     public void smelt() {
-        System.out.println("Smelting " + this.getClass().getSimpleName() + " with 70% Cu and" +
-            " 24.5% Zi and 5.5% Ni...completed");
+        System.out.println("Smelting " + this.getClass().getSimpleName() + " with 70% Cu, " +
+            "24.5% Zi, and 5.5% Ni...completed.");
     }
 }

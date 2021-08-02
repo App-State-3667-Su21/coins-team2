@@ -6,6 +6,6 @@ public class TwentyPence extends Coin {
 
     public void smelt() {
         System.out.println("Smelting " + this.getClass().getSimpleName() + 
-            " with 84% Cu and 16% Ni...completed");
+            " with 84% Cu and 16% Ni...completed.");
     }
 }
