@@ -60,14 +60,15 @@ public abstract class Coin {
             else {
                 buff();
                 if (this.r.nextInt(1000) == 0) {
-                    System.out.println("Smoothing " + 
-                            this.getClass().getSimpleName() +  "...failed.");
+                    System.out.println("Smoothing " 
+                                        + this.getClass().getSimpleName()
+                                         +  "...failed.");
                     System.out.println("Failed to manufacture coin.");
                 }
                 else {
                     smooth();
-                    System.out.println("(" + this.getClass().getSimpleName() +
-                     ")$" + this.getDenomination());
+                    System.out.println("(" + this.getClass().getSimpleName()
+                                        + ")$" + this.getDenomination());
                 }
             }
         }
@@ -75,7 +76,8 @@ public abstract class Coin {
     
     /**
      * Simulates smelting a coin.
-     * Will need concrete Coins to implement this because they have unique compositions.
+     * Will need concrete Coins to implement this because they have unique 
+     * compositions.
      */
     public abstract void smelt();
     
@@ -83,43 +85,52 @@ public abstract class Coin {
      * Will print a message simulating a coin being imprinted.
      */
     public void imprint() {
-        System.out.println("Imprinting " + this.getClass().getSimpleName() + "...completed.");
+        System.out.println("Imprinting " + this.getClass().getSimpleName() 
+                            + "...completed.");
     }
 
     /**
      * Will print a message simulating a coin being inspected.
      */
     public void inspect() {
-        System.out.println("Inspecting " + this.getClass().getSimpleName() +  "...completed.");
+        System.out.println("Inspecting " + this.getClass().getSimpleName()
+                            +  "...completed.");
     }
 
     /**
      * Will print a message simulating a coin being smoothed.
      */
     public void smooth() {
-        System.out.println("Smoothing " + this.getClass().getSimpleName() +  "...completed.");
+        System.out.println("Smoothing " + this.getClass().getSimpleName()
+                            + "...completed.");
     }
 
     /**
      * Will print a message simulating a coin being buffed.
      */
     public void buff() {
-        System.out.println("Buffing " + this.getClass().getSimpleName() +  "...completed.");
+        System.out.println("Buffing " + this.getClass().getSimpleName()
+                            + "...completed.");
     }
     
     /**
+     * NullCoin is a Coin that represents a null Coin object.
      * 
+     * @author Coins Team 2
+     * @version Summer 2021
      */
     private static class NullCoin extends Coin {
         /**
-         * 
+         * Constructor.
          */
         public NullCoin() {
             super(-1);
         }
 
         /**
+         * Overrides the superclass method to represent null behavior.
          * 
+         * @return an empty string which represents a null country code
          */
         @Override
         public String getCountryCode() {
@@ -127,7 +138,9 @@ public abstract class Coin {
         }
 
         /**
+         * Overrides the superclass method to represent null behavior.
          * 
+         * @return a value that represents a null denomination
          */
         @Override
         public double getDenomination() {
@@ -135,34 +148,34 @@ public abstract class Coin {
         }
 
         /**
-         * 
+         * Overrides the superclass method to represent null behavior.
          */
         @Override
-        public void smelt() {}
+        public void smelt() { }
         
         
         /**
-         * 
+         * Overrides the superclass method to represent null behavior.
          */
         @Override
-        public void inspect() {}
+        public void inspect() { }
         
         /**
-         * 
+         * Overrides the superclass method to represent null behavior.
          */
         @Override
-        public void smooth() {}
+        public void smooth() { }
   
         /**
-         * 
+         * Overrides the superclass method to represent null behavior.
          */
         @Override
-        public void buff() {}
+        public void buff() { }
 
         /**
-         * 
+         * Overrides the superclass method to represent null behavior.
          */
         @Override
-        public void manufactureCoin() {}
+        public void manufactureCoin() { }
     }
 }
