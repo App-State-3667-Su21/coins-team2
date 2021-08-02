@@ -1,3 +1,9 @@
+/**
+ * GBP Coin Mint class that creates the GBP coins.
+ * 
+ * @author Justin Pretlow
+ * @version 8/2/2021
+ */
 public class GBPCoinMint extends CoinMint {
     private volatile static GBPCoinMint uniqueInstance;
 
