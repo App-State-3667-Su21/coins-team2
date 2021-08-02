@@ -5,6 +5,11 @@ public class GBPCoinMint extends CoinMint {
 
     }
 
+    /**
+     * Double check lock.
+     * 
+     * @return an instance of the gbp coin mint.
+     */
     public static GBPCoinMint getInstance() {
        if (uniqueInstance == null) {
            synchronized (GBPCoinMint.class) {
@@ -16,6 +21,12 @@ public class GBPCoinMint extends CoinMint {
        return uniqueInstance;
     }
 
+    /**
+     * Creates a coin with the respective country code and denomination.
+     * 
+     * @param denom a double representation of the denomination of the coin
+     * @return a Coin reference to the respective coin based on denomination
+     */
     public Coin createCoin(double denom) {
         String denomS = String.valueOf(denom);
         switch(denomS) {
